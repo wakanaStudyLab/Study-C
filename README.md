@@ -93,8 +93,8 @@ cd C:\Users\harun\programming\C++
 cmake -B build -S . -G "Ninja" `
   -DCMAKE_BUILD_TYPE=Release `
   -DCMAKE_MAKE_PROGRAM="C:/ninja/ninja.exe" `
-  -DCMAKE_C_COMPILER="C:/Program Files/LLVM/bin/clang.exe" `
-  -DCMAKE_CXX_COMPILER="C:/Program Files/LLVM/bin/clang++.exe" `
+  -DCMAKE_C_COMPILER="clang" `
+  -DCMAKE_CXX_COMPILER="clang++" `
   -DCMAKE_RC_COMPILER="C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/rc.exe"
 
 # 2. ビルド (Build)
@@ -104,6 +104,12 @@ cmake --build build
 .\build\bin\c_sample.exe
 .\build\bin\cpp_sample.exe
 ```
+
+> [!NOTE]
+> **各ツールのパス指定について:**  
+> - **`clang` / `clang++`**: PATH 上で競合するツールがないため、コマンド名（PATH 解決）で指定しています。
+> - **`ninja` / `cmake`**: STM32 開発環境（STM32CubeCLT 等）がシステム PATH の前方に存在し古いバージョンや別ターゲット用と競合するため、本プロジェクト用のバイナリを絶対パスで明示指定しています。
+> - **`rc.exe`**: 通常 Windows SDK のバイナリパスは PATH に通らないため、絶対パスで指定しています。
 
 #### B. Visual Studio ジェネレータ（マルチ構成）
 ```powershell
