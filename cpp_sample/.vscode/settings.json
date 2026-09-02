@@ -2,7 +2,7 @@
     "cmake.sourceDirectory": "${workspaceFolder}",
     "cmake.buildDirectory": "${workspaceFolder}/build",
     "cmake.generator": "Ninja",
-    "cmake.cmakePath": "C:/ST/STM32CubeCLT_1.21.0/CMake/bin/cmake.exe",
+    "cmake.cmakePath": "C:/Program Files/CMake/bin/cmake.exe",
     "cmake.configureArgs": [
         "-DCMAKE_BUILD_TYPE=Release",
         "-DCMAKE_MAKE_PROGRAM=C:/ninja/ninja.exe",
@@ -12,3 +12,4 @@
         "-DCMAKE_MT=C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/mt.exe"
     ]
 }
+
