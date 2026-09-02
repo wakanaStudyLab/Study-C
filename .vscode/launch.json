@@ -2,10 +2,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "▶ Run/Debug: C++ Sample (cpp_sample)",
+            "name": "▶ Run/Debug: C++ Sample (Release)",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/bin/Release/cpp_sample.exe",
+            "program": "${workspaceFolder}/build/bin/cpp_sample.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}/cpp_sample",
@@ -14,10 +14,10 @@
             "preLaunchTask": "CMake: Build All (Release)"
         },
         {
-            "name": "▶ Run/Debug: C Sample (c_sample)",
+            "name": "▶ Run/Debug: C Sample (Release)",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/bin/Release/c_sample.exe",
+            "program": "${workspaceFolder}/build/bin/c_sample.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}/c_sample",
@@ -26,13 +26,25 @@
             "preLaunchTask": "CMake: Build All (Release)"
         },
         {
-            "name": "▶ Run/Debug: C++ Sample (Debug Build)",
+            "name": "▶ Debug: C++ Sample (Debug Build)",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/bin/Debug/cpp_sample.exe",
+            "program": "${workspaceFolder}/build-debug/bin/cpp_sample.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}/cpp_sample",
+            "environment": [],
+            "console": "integratedTerminal",
+            "preLaunchTask": "CMake: Build All (Debug)"
+        },
+        {
+            "name": "▶ Debug: C Sample (Debug Build)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build-debug/bin/c_sample.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/c_sample",
             "environment": [],
             "console": "integratedTerminal",
             "preLaunchTask": "CMake: Build All (Debug)"

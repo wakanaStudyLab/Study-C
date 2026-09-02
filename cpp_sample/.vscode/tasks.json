@@ -2,21 +2,57 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "CMake: Configure (Release)",
+            "type": "shell",
+            "command": "C:/ST/STM32CubeCLT_1.21.0/CMake/bin/cmake.exe",
+            "args": [
+                "-B", "build", "-S", ".",
+                "-G", "Ninja",
+                "-DCMAKE_BUILD_TYPE=Release",
+                "-DCMAKE_MAKE_PROGRAM=C:/ninja/ninja.exe",
+                "-DCMAKE_C_COMPILER=C:/Program Files/LLVM/bin/clang-cl.exe",
+                "-DCMAKE_CXX_COMPILER=C:/Program Files/LLVM/bin/clang-cl.exe",
+                "-DCMAKE_RC_COMPILER=C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/rc.exe",
+                "-DCMAKE_MT=C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/mt.exe"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "CMake: Configure (Debug)",
+            "type": "shell",
+            "command": "C:/ST/STM32CubeCLT_1.21.0/CMake/bin/cmake.exe",
+            "args": [
+                "-B", "build-debug", "-S", ".",
+                "-G", "Ninja",
+                "-DCMAKE_BUILD_TYPE=Debug",
+                "-DCMAKE_MAKE_PROGRAM=C:/ninja/ninja.exe",
+                "-DCMAKE_C_COMPILER=C:/Program Files/LLVM/bin/clang-cl.exe",
+                "-DCMAKE_CXX_COMPILER=C:/Program Files/LLVM/bin/clang-cl.exe",
+                "-DCMAKE_RC_COMPILER=C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/rc.exe",
+                "-DCMAKE_MT=C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/mt.exe"
+            ],
+            "problemMatcher": []
+        },
+        {
             "label": "CMake: Build (Release)",
             "type": "shell",
-            "command": "cmake -B build -S . && cmake --build build --config Release",
+            "command": "C:/ST/STM32CubeCLT_1.21.0/CMake/bin/cmake.exe",
+            "args": ["--build", "build"],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            "problemMatcher": "$msCompile"
+            "dependsOn": "CMake: Configure (Release)",
+            "problemMatcher": "$gcc"
         },
         {
             "label": "CMake: Build (Debug)",
             "type": "shell",
-            "command": "cmake -B build -S . && cmake --build build --config Debug",
+            "command": "C:/ST/STM32CubeCLT_1.21.0/CMake/bin/cmake.exe",
+            "args": ["--build", "build-debug"],
             "group": "build",
-            "problemMatcher": "$msCompile"
+            "dependsOn": "CMake: Configure (Debug)",
+            "problemMatcher": "$gcc"
         }
     ]
 }

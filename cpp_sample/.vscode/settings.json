@@ -1,5 +1,14 @@
 {
     "cmake.sourceDirectory": "${workspaceFolder}",
     "cmake.buildDirectory": "${workspaceFolder}/build",
-    "cmake.generator": "Visual Studio 17 2022"
+    "cmake.generator": "Ninja",
+    "cmake.cmakePath": "C:/ST/STM32CubeCLT_1.21.0/CMake/bin/cmake.exe",
+    "cmake.configureArgs": [
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_MAKE_PROGRAM=C:/ninja/ninja.exe",
+        "-DCMAKE_C_COMPILER=C:/Program Files/LLVM/bin/clang-cl.exe",
+        "-DCMAKE_CXX_COMPILER=C:/Program Files/LLVM/bin/clang-cl.exe",
+        "-DCMAKE_RC_COMPILER=C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/rc.exe",
+        "-DCMAKE_MT=C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/mt.exe"
+    ]
 }

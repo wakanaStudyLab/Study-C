@@ -5,7 +5,7 @@
             "name": "▶ Run/Debug: C Sample (Release)",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/bin/Release/c_sample.exe",
+            "program": "${workspaceFolder}/build/bin/c_sample.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
@@ -14,10 +14,10 @@
             "preLaunchTask": "CMake: Build (Release)"
         },
         {
-            "name": "▶ Run/Debug: C Sample (Debug)",
+            "name": "▶ Debug: C Sample (Debug)",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/bin/Debug/c_sample.exe",
+            "program": "${workspaceFolder}/build-debug/bin/c_sample.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",

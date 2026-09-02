@@ -5,7 +5,7 @@
             "name": "▶ Run/Debug: Modern C++ Sample (Release)",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/bin/Release/cpp_sample.exe",
+            "program": "${workspaceFolder}/build/bin/cpp_sample.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
@@ -14,10 +14,10 @@
             "preLaunchTask": "CMake: Build (Release)"
         },
         {
-            "name": "▶ Run/Debug: Modern C++ Sample (Debug)",
+            "name": "▶ Debug: Modern C++ Sample (Debug)",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/bin/Debug/cpp_sample.exe",
+            "program": "${workspaceFolder}/build-debug/bin/cpp_sample.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
