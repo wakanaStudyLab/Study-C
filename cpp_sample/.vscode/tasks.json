@@ -10,10 +10,9 @@
                 "-G", "Ninja",
                 "-DCMAKE_BUILD_TYPE=Release",
                 "-DCMAKE_MAKE_PROGRAM=C:/ninja/ninja.exe",
-                "-DCMAKE_C_COMPILER=C:/Program Files/LLVM/bin/clang-cl.exe",
-                "-DCMAKE_CXX_COMPILER=C:/Program Files/LLVM/bin/clang-cl.exe",
-                "-DCMAKE_RC_COMPILER=C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/rc.exe",
-                "-DCMAKE_MT=C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/mt.exe"
+                "-DCMAKE_C_COMPILER=C:/Program Files/LLVM/bin/clang.exe",
+                "-DCMAKE_CXX_COMPILER=C:/Program Files/LLVM/bin/clang++.exe",
+                "-DCMAKE_RC_COMPILER=C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/rc.exe"
             ],
             "problemMatcher": []
         },
@@ -26,10 +25,9 @@
                 "-G", "Ninja",
                 "-DCMAKE_BUILD_TYPE=Debug",
                 "-DCMAKE_MAKE_PROGRAM=C:/ninja/ninja.exe",
-                "-DCMAKE_C_COMPILER=C:/Program Files/LLVM/bin/clang-cl.exe",
-                "-DCMAKE_CXX_COMPILER=C:/Program Files/LLVM/bin/clang-cl.exe",
-                "-DCMAKE_RC_COMPILER=C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/rc.exe",
-                "-DCMAKE_MT=C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/mt.exe"
+                "-DCMAKE_C_COMPILER=C:/Program Files/LLVM/bin/clang.exe",
+                "-DCMAKE_CXX_COMPILER=C:/Program Files/LLVM/bin/clang++.exe",
+                "-DCMAKE_RC_COMPILER=C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/rc.exe"
             ],
             "problemMatcher": []
         },
@@ -56,4 +54,3 @@
         }
     ]
 }
-
