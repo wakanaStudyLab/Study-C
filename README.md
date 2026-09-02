@@ -49,6 +49,33 @@ C:\Users\harun\programming\C++\
 
 ---
 
+## 🛠️ ビルドに必要な環境・要件 (Prerequisites)
+
+本環境では、**Clang (`clang-cl`) + Ninja** を用いた高速ビルドおよび **MSVC (cppvsdbg)** によるデバッグ構成を採用しています。新規マシン等でビルド・デバッグを行うには以下の環境が必要です。
+
+### 1. 必要なツール一覧
+
+| ツール | 用途 | インストール先（本環境例） | 入手先 / 導入方法 |
+| :--- | :--- | :--- | :--- |
+| **LLVM / Clang**<br>(`clang-cl.exe`) | C/C++ コンパイラ<br>(MSVC互換モード) | `C:\Program Files\LLVM\bin\` | [LLVM Releases (GitHub)](https://github.com/llvm/llvm-project/releases)<br>（Windows 64bit用インストーラ） |
+| **Ninja**<br>(`ninja.exe`) | 高速ビルドジェネレータ | `C:\ninja\ninja.exe` | [Ninja Releases (GitHub)](https://github.com/ninja-build/ninja/releases)<br>（実行ファイルを配置） |
+| **CMake**<br>(`cmake.exe`) | ビルド構成生成ツール | `C:\ST\STM32CubeCLT_1.21.0\CMake\bin\` | [cmake.org](https://cmake.org/download/)<br>または STM32CubeCLT 付属版 |
+| **Windows SDK**<br>(`rc.exe`, `mt.exe`) | リソースコンパイラ /<br>マニフェストツール | `C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x64\` | Visual Studio Installer または<br>[Windows SDK 公式](https://developer.microsoft.com/ja-jp/windows/downloads/windows-sdk/) |
+| **MSVC CRT**<br>(C/C++ Build Tools) | C/C++ ランタイムライブラリ<br>(`clang-cl` がリンク) | Visual Studio インストール配下 | [Visual Studio Build Tools](https://visualstudio.microsoft.com/ja/downloads/)<br>「C++ によるデスクトップ開発」 |
+
+### 2. VS Code 推奨拡張機能
+
+| 拡張機能 | 識別子 | 用途 |
+| :--- | :--- | :--- |
+| **C/C++** | `ms-vscode.cpptools` | IntelliSense、シンタックスハイライト、デバッグ (`cppvsdbg`) |
+| **CMake Tools** | `ms-vscode.cmake-tools` | VS Code 統合 CMake ビルド & テスト |
+
+> [!IMPORTANT]
+> **MSVC Build Tools (CRT) の必須性:**  
+> Windows 上で `clang-cl` を使う場合、起動エントリ（`mainCRTStartup` 等）や標準ライブラリ（`libcmt`, `msvcrt` 等）は MSVC のランタイムを参照します。Visual Studio または C++ Build Tools が未導入の場合、リンクエラーが発生します。
+
+---
+
 ## 🚀 CMake でのビルド & 実行方法
 
 ### 1. PowerShell スクリプトで一括実行 (最も簡単)
@@ -57,19 +84,33 @@ cd C:\Users\harun\programming\C++
 .\build_and_run.ps1
 ```
 
-### 2. 標準的な CMake コマンドで手動ビルド
+### 2. コマンドラインでの手動ビルド
+
+#### A. Ninja + Clang-cl（本プロジェクト標準構成）
 ```powershell
-cd C:\Users\harun\programming\C++
+# 1. 構成 (Configure): Release または Debug を指定
+cmake -B build -S . -G "Ninja" `
+  -DCMAKE_BUILD_TYPE=Release `
+  -DCMAKE_MAKE_PROGRAM="C:/ninja/ninja.exe" `
+  -DCMAKE_C_COMPILER="C:/Program Files/LLVM/bin/clang-cl.exe" `
+  -DCMAKE_CXX_COMPILER="C:/Program Files/LLVM/bin/clang-cl.exe" `
+  -DCMAKE_RC_COMPILER="C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/rc.exe" `
+  -DCMAKE_MT="C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/mt.exe"
 
-# 1. 構成 (Configure): build ディレクトリを作成
-cmake -B build -S .
-
-# 2. ビルド (Build): Release 構成でコンパイル
-cmake --build build --config Release
+# 2. ビルド (Build)
+cmake --build build
 
 # 3. 実行 (Run)
-.\build\bin\Release\c_sample.exe    # C言語サンプル
-.\build\bin\Release\cpp_sample.exe  # C++言語サンプル
+.\build\bin\c_sample.exe
+.\build\bin\cpp_sample.exe
+```
+
+#### B. Visual Studio ジェネレータ（マルチ構成）
+```powershell
+cmake -B build -S .
+cmake --build build --config Release
+.\build\bin\Release\c_sample.exe
+.\build\bin\Release\cpp_sample.exe
 ```
 
 ### 3. VS Code でのビルド & F5 デバッグ
