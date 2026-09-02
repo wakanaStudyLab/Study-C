@@ -23,6 +23,7 @@ C:\Users\harun\programming\C++\
 │   │   ├── structs_and_functions.c
 │   │   ├── strings_and_io.c
 │   │   └── main.c                    # C言語 統合エントリーポイント
+|   ├── POINTERS.md                   #ポインタを完全に理解できるかもしれないファイル
 │   └── README.md                     # C言語 詳細チートシート & 言語対比表
 │
 ├── cpp_sample\                       # 【Modern C++ (C++20/C++23) 最速習得コース】
