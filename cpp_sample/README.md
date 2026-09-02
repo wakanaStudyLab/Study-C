@@ -42,9 +42,13 @@ cmake --build build --config Release --target cpp_sample
 
 ## 📁 ソースファイル構成
 
-- [`include/raii_and_smart_pointers.hpp`](file:///C:/Users/harun/programming/C++/cpp_sample/include/raii_and_smart_pointers.hpp) / [`src/raii_and_smart_pointers.cpp`](file:///C:/Users/harun/programming/C++/cpp_sample/src/raii_and_smart_pointers.cpp): RAII・unique_ptr / shared_ptr
-- [`include/move_semantics_and_classes.hpp`](file:///C:/Users/harun/programming/C++/cpp_sample/include/move_semantics_and_classes.hpp) / [`src/move_semantics_and_classes.cpp`](file:///C:/Users/harun/programming/C++/cpp_sample/src/move_semantics_and_classes.cpp): 右辺値参照・std::move・Rule of 5/0・virtual
-- [`include/stl_and_ranges.hpp`](file:///C:/Users/harun/programming/C++/cpp_sample/include/stl_and_ranges.hpp) / [`src/stl_and_ranges.cpp`](file:///C:/Users/harun/programming/C++/cpp_sample/src/stl_and_ranges.cpp): string_view・C++20 Ranges パイプライン・sort
-- [`include/templates_and_modern_types.hpp`](file:///C:/Users/harun/programming/C++/cpp_sample/include/templates_and_modern_types.hpp) / [`src/templates_and_modern_types.cpp`](file:///C:/Users/harun/programming/C++/cpp_sample/src/templates_and_modern_types.cpp): C++20 Concepts・optional・variant & visit
-- [`include/concurrency.hpp`](file:///C:/Users/harun/programming/C++/cpp_sample/include/concurrency.hpp) / [`src/concurrency.cpp`](file:///C:/Users/harun/programming/C++/cpp_sample/src/concurrency.cpp): 非同期 async/future・C++20 jthread・atomic
-- [`src/main.cpp`](file:///C:/Users/harun/programming/C++/cpp_sample/src/main.cpp): 統合エントリーポイント
+- [`include/raii_and_smart_pointers.hpp`](file:///C:/Users/harun/programming/C++/sample/cpp_sample/include/raii_and_smart_pointers.hpp) / [`src/raii_and_smart_pointers.cpp`](file:///C:/Users/harun/programming/C++/sample/cpp_sample/src/raii_and_smart_pointers.cpp): RAII・unique_ptr / shared_ptr
+- [`include/move_semantics_and_classes.hpp`](file:///C:/Users/harun/programming/C++/sample/cpp_sample/include/move_semantics_and_classes.hpp) / [`src/move_semantics_and_classes.cpp`](file:///C:/Users/harun/programming/C++/sample/cpp_sample/src/move_semantics_and_classes.cpp): 右辺値参照・std::move・Rule of 5/0・virtual
+- [`include/stl_and_ranges.hpp`](file:///C:/Users/harun/programming/C++/sample/cpp_sample/include/stl_and_ranges.hpp) / [`src/stl_and_ranges.cpp`](file:///C:/Users/harun/programming/C++/sample/cpp_sample/src/stl_and_ranges.cpp): string_view・C++20 Ranges パイプライン・sort
+- [`include/templates_and_modern_types.hpp`](file:///C:/Users/harun/programming/C++/sample/cpp_sample/include/templates_and_modern_types.hpp) / [`src/templates_and_modern_types.cpp`](file:///C:/Users/harun/programming/C++/sample/cpp_sample/src/templates_and_modern_types.cpp): C++20 Concepts・optional・variant & visit
+- [`include/concurrency.hpp`](file:///C:/Users/harun/programming/C++/sample/cpp_sample/include/concurrency.hpp) / [`src/concurrency.cpp`](file:///C:/Users/harun/programming/C++/sample/cpp_sample/src/concurrency.cpp): 非同期 async/future・C++20 jthread・atomic
+- [`include/lambda_expressions.hpp`](file:///C:/Users/harun/programming/C++/sample/cpp_sample/include/lambda_expressions.hpp) / [`src/lambda_expressions.cpp`](file:///C:/Users/harun/programming/C++/sample/cpp_sample/src/lambda_expressions.cpp): キャプチャ・mutable・ムーブ・C++20テンプレートラムダ・IIFE
+- [`src/main.cpp`](file:///C:/Users/harun/programming/C++/sample/cpp_sample/src/main.cpp): 統合エントリーポイント
+
+> 📖 **Modern C++ ラムダ式の完全理解ガイド**:  
+> C++におけるラムダ式の構文解剖からキャプチャリスト（値・参照・ムーブ・`mutable`）、IIFE、コンパイラが裏で生成する無名ファンクタクラスの正体まで完全網羅した解説は [**`LAMBDA.md`**](file:///C:/Users/harun/programming/C++/sample/cpp_sample/LAMBDA.md) を参照してください。

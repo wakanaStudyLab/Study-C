@@ -18,6 +18,7 @@ set(CPP_SOURCES
     src/stl_and_ranges.cpp
     src/templates_and_modern_types.cpp
     src/concurrency.cpp
+    src/lambda_expressions.cpp
 )
 
 # 3. 実行可能バイナリターゲットの作成

@@ -40,7 +40,11 @@ cmake --build build --config Release --target c_sample
 
 ## 📁 ソースファイル構成
 
-- [`include/pointers_and_memory.h`](file:///C:/Users/harun/programming/C++/c_sample/include/pointers_and_memory.h) / [`src/pointers_and_memory.c`](file:///C:/Users/harun/programming/C++/c_sample/src/pointers_and_memory.c): ポインタ演算・動的確保・多重ポインタ
-- [`include/structs_and_functions.h`](file:///C:/Users/harun/programming/C++/c_sample/include/structs_and_functions.h) / [`src/structs_and_functions.c`](file:///C:/Users/harun/programming/C++/c_sample/src/structs_and_functions.c): パディング・アライメント・関数ポインタ
-- [`include/strings_and_io.h`](file:///C:/Users/harun/programming/C++/c_sample/include/strings_and_io.h) / [`src/strings_and_io.c`](file:///C:/Users/harun/programming/C++/c_sample/src/strings_and_io.c): ヌル終端文字列・snprintf・ファイルI/O
-- [`src/main.c`](file:///C:/Users/harun/programming/C++/c_sample/src/main.c): 統合エントリーポイント
+- [`include/pointers_and_memory.h`](file:///C:/Users/harun/programming/C++/sample/c_sample/include/pointers_and_memory.h) / [`src/pointers_and_memory.c`](file:///C:/Users/harun/programming/C++/sample/c_sample/src/pointers_and_memory.c): ポインタ演算・動的確保・多重ポインタ
+- [`include/structs_and_functions.h`](file:///C:/Users/harun/programming/C++/sample/c_sample/include/structs_and_functions.h) / [`src/structs_and_functions.c`](file:///C:/Users/harun/programming/C++/sample/c_sample/src/structs_and_functions.c): パディング・アライメント・関数ポインタ
+- [`include/strings_and_io.h`](file:///C:/Users/harun/programming/C++/sample/c_sample/include/strings_and_io.h) / [`src/strings_and_io.c`](file:///C:/Users/harun/programming/C++/sample/c_sample/src/strings_and_io.c): ヌル終端文字列・snprintf・ファイルI/O
+- [`include/lambda_and_callbacks.h`](file:///C:/Users/harun/programming/C++/sample/c_sample/include/lambda_and_callbacks.h) / [`src/lambda_and_callbacks.c`](file:///C:/Users/harun/programming/C++/sample/c_sample/src/lambda_and_callbacks.c): コールバック・void*状態キャプチャ・クロージャ構造体
+- [`src/main.c`](file:///C:/Users/harun/programming/C++/sample/c_sample/src/main.c): 統合エントリーポイント
+
+> 📖 **C言語におけるラムダ式・クロージャの深層理解**:  
+> C言語で状態キャプチャや高階関数、クロージャをどう実現するかの完全解説は [**`LAMBDA.md`**](file:///C:/Users/harun/programming/C++/sample/c_sample/LAMBDA.md) を参照してください。現代の高水準言語が裏で生成しているマシン語の物理的実体を学べます。

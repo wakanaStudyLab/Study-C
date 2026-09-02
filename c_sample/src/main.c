@@ -2,6 +2,7 @@
 #include "pointers_and_memory.h"
 #include "structs_and_functions.h"
 #include "strings_and_io.h"
+#include "lambda_and_callbacks.h"
 
 /**
  * ============================================================================
@@ -75,6 +76,13 @@ int main(void) {
      * ・FILE* によるファイルの書き込み・読み込み */
     print_section("03: Null-Terminated Strings and Safe File I/O");
     run_strings_and_io_demo();
+
+    /* --- モジュール 04: コールバックと擬似ラムダ・クロージャ ---
+     * ・関数ポインタによるステートレスな高階関数
+     * ・void* user_data による状態キャプチャ (クロージャの物理構造)
+     * ・ヒープ確保による安全な非同期コールバックライフサイクル */
+    print_section("04: Callbacks, State Capture (void* user_data), and Closures");
+    run_lambda_and_callbacks_demo();
 
     print_banner("ALL C TUTORIAL MODULES COMPLETED SUCCESSFULLY!");
 

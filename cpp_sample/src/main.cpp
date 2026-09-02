@@ -4,6 +4,7 @@
 #include "stl_and_ranges.hpp"
 #include "templates_and_modern_types.hpp"
 #include "concurrency.hpp"
+#include "lambda_expressions.hpp"
 
 /**
  * ============================================================================
@@ -83,6 +84,14 @@ int main() {
     // ・std::atomic<T> によるロックフリーカウンター
     print_section("05: Concurrency, Async Future, and C++20 jthread");
     modern_cpp::run_concurrency_demo();
+
+    // --- モジュール 06: ラムダ式と関数型プログラミング ---
+    // ・キャプチャ（値・参照・mutable・ムーブ）
+    // ・C++14 auto / C++20 テンプレートラムダ
+    // ・IIFE による const 初期化イディオム
+    // ・Concepts によるゼロオーバーヘッド関数呼び出し
+    print_section("06: Lambda Expressions & Functional Modern C++");
+    modern_cpp::run_lambda_expressions_demo();
 
     // 全モジュール完了のバナーを表示
     print_banner("ALL C++ TUTORIAL MODULES COMPLETED SUCCESSFULLY!");

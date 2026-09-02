@@ -16,6 +16,7 @@ set(C_SOURCES
     src/pointers_and_memory.c
     src/structs_and_functions.c
     src/strings_and_io.c
+    src/lambda_and_callbacks.c
 )
 
 # 3. 実行可能バイナリターゲットの作成
