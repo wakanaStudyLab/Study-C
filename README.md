@@ -7,7 +7,7 @@ Rust, C#, Go などの静的型付け言語を理解しているエンジニア�
 ## 📂 プロジェクト全体構成 (Directory Structure)
 
 ```text
-C:\Users\harun\programming\C++\sample\
+sample/
 ├── CMakeLists.txt                    # ルート CMake 設定 (C/C++ プロジェクト一括管理)
 │
 ├── c_sample\                         # 【C言語 最速習得コース (全9モジュール)】
@@ -105,7 +105,6 @@ C:\Users\harun\programming\C++\sample\
 
 ### 1. PowerShell スクリプトで一括実行 (最も簡単)
 ```powershell
-cd C:\Users\harun\programming\C++\sample
 .\build_and_run.ps1
 ```
 

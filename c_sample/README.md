@@ -7,10 +7,10 @@ Rust, C#, Go 経験者向けに特化した、**C言語のコア概念（ポイ�
 
 ## 🚀 CMake でのビルド & 実行方法
 
-ルートディレクトリ（`C:\Users\harun\programming\C++\sample`）から CMake で一括ビルド・実行できます：
+ルートディレクトリ（`..`）から CMake で一括ビルド・実行できます：
 
 ```powershell
-cd C:\Users\harun\programming\C++\sample
+cd ..
 
 # 構成 & ビルド
 cmake -B build -S .
