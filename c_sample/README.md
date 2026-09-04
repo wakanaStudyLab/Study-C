@@ -48,18 +48,18 @@ cmake --build build --config Release --target c_sample
 
 | # | ヘッダー / 実装 | 主な学習トピック |
 | :-: | :--- | :--- |
-| **01** | [`pointers_and_memory.h`](file:///C:/Users/harun/programming/C++/sample/c_sample/include/pointers_and_memory.h)<br>[`pointers_and_memory.c`](file:///C:/Users/harun/programming/C++/sample/c_sample/src/pointers_and_memory.c) | ポインタの基礎、アドレス演算子 (`&`)、ポインタ演算 (`*(arr + i)`)、`malloc` / `free`、二重ポインタ (`int**`) 出力引数パターン |
-| **02** | [`structs_and_functions.h`](file:///C:/Users/harun/programming/C++/sample/c_sample/include/structs_and_functions.h)<br>[`structs_and_functions.c`](file:///C:/Users/harun/programming/C++/sample/c_sample/src/structs_and_functions.c) | 構造体メモリレイアウト、パディング・アライメント (`sizeof`)、アロー演算子 (`->`)、関数ポインタによるコールバックと OOP 模倣 (VTable) |
-| **03** | [`strings_and_io.h`](file:///C:/Users/harun/programming/C++/sample/c_sample/include/strings_and_io.h)<br>[`strings_and_io.c`](file:///C:/Users/harun/programming/C++/sample/c_sample/src/strings_and_io.c) | ヌル終端文字列 (`\0`)、`strlen` の計算量、サイズ指定付き安全関数 (`snprintf`)、`FILE*` によるファイル書き込み・読み込み |
-| **04** | [`lambda_and_callbacks.h`](file:///C:/Users/harun/programming/C++/sample/c_sample/include/lambda_and_callbacks.h)<br>[`lambda_and_callbacks.c`](file:///C:/Users/harun/programming/C++/sample/c_sample/src/lambda_and_callbacks.c) | ステートレス関数ポインタ、`void* user_data` による状態キャプチャ（クロージャの物理的実体）、ヒープ確保による非同期ライフサイクル管理 |
-| **05** | [`modern_c11_features.h`](file:///C:/Users/harun/programming/C++/sample/c_sample/include/modern_c11_features.h)<br>[`modern_c11_features.c`](file:///C:/Users/harun/programming/C++/sample/c_sample/src/modern_c11_features.c) | C11 `_Generic` 型ディスパッチ (疑似オーバーロード)、匿名構造体 & 匿名共用体、フレキシブル配列メンバ (可変長パケット単一アロケーション) |
-| **06** | [`bitwise_and_binary.h`](file:///C:/Users/harun/programming/C++/sample/c_sample/include/bitwise_and_binary.h)<br>[`bitwise_and_binary.c`](file:///C:/Users/harun/programming/C++/sample/c_sample/src/bitwise_and_binary.c) | ビットマスクによるフラグ制御 (AND/OR/XOR/NOT)、**ビットフィールド** による省メモリ設計、**エンディアン判定とバイトスワップ**、HEXダンプ |
-| **07** | [`preprocessor_and_macros.h`](file:///C:/Users/harun/programming/C++/sample/c_sample/include/preprocessor_and_macros.h)<br>[`preprocessor_and_macros.c`](file:///C:/Users/harun/programming/C++/sample/c_sample/src/preprocessor_and_macros.c) | `do-while(0)` 安全マクロ、文字列化 (`#`) とトークン連結 (`##`)、**X-Macros** (Enum と文字列を単一テーブルから自動生成する最高峰イディオム)、`_Static_assert` |
-| **08** | [`error_handling_and_jump.h`](file:///C:/Users/harun/programming/C++/sample/c_sample/include/error_handling_and_jump.h)<br>[`error_handling_and_jump.c`](file:///C:/Users/harun/programming/C++/sample/c_sample/src/error_handling_and_jump.c) | Linux カーネル標準 **`goto cleanup;`** イディオム (確実な逆順リソースクリーンアップ)、`errno` / `strerror`、**`setjmp` / `longjmp`** (例外エミュレーション) |
-| **09** | [`dynamic_data_structures.h`](file:///C:/Users/harun/programming/C++/sample/c_sample/include/dynamic_data_structures.h)<br>[`dynamic_data_structures.c`](file:///C:/Users/harun/programming/C++/sample/c_sample/src/dynamic_data_structures.c) | 容量倍増 (Doubling) による動的配列 (**Vector** 実装と `realloc` の安全な作法)、Linux カーネルスタイル侵入型リスト (**`container_of`** マクロの解剖) |
+| **01** | [`pointers_and_memory.h`](./c_sample/include/pointers_and_memory.h)<br>[`pointers_and_memory.c`](./c_sample/src/pointers_and_memory.c) | ポインタの基礎、アドレス演算子 (`&`)、ポインタ演算 (`*(arr + i)`)、`malloc` / `free`、二重ポインタ (`int**`) 出力引数パターン |
+| **02** | [`structs_and_functions.h`](./c_sample/include/structs_and_functions.h)<br>[`structs_and_functions.c`](./c_sample/src/structs_and_functions.c) | 構造体メモリレイアウト、パディング・アライメント (`sizeof`)、アロー演算子 (`->`)、関数ポインタによるコールバックと OOP 模倣 (VTable) |
+| **03** | [`strings_and_io.h`](./c_sample/include/strings_and_io.h)<br>[`strings_and_io.c`](./c_sample/src/strings_and_io.c) | ヌル終端文字列 (`\0`)、`strlen` の計算量、サイズ指定付き安全関数 (`snprintf`)、`FILE*` によるファイル書き込み・読み込み |
+| **04** | [`lambda_and_callbacks.h`](./c_sample/include/lambda_and_callbacks.h)<br>[`lambda_and_callbacks.c`](./c_sample/src/lambda_and_callbacks.c) | ステートレス関数ポインタ、`void* user_data` による状態キャプチャ（クロージャの物理的実体）、ヒープ確保による非同期ライフサイクル管理 |
+| **05** | [`modern_c11_features.h`](./c_sample/include/modern_c11_features.h)<br>[`modern_c11_features.c`](./c_sample/src/modern_c11_features.c) | C11 `_Generic` 型ディスパッチ (疑似オーバーロード)、匿名構造体 & 匿名共用体、フレキシブル配列メンバ (可変長パケット単一アロケーション) |
+| **06** | [`bitwise_and_binary.h`](./c_sample/include/bitwise_and_binary.h)<br>[`bitwise_and_binary.c`](./c_sample/src/bitwise_and_binary.c) | ビットマスクによるフラグ制御 (AND/OR/XOR/NOT)、**ビットフィールド** による省メモリ設計、**エンディアン判定とバイトスワップ**、HEXダンプ |
+| **07** | [`preprocessor_and_macros.h`](./c_sample/include/preprocessor_and_macros.h)<br>[`preprocessor_and_macros.c`](./c_sample/src/preprocessor_and_macros.c) | `do-while(0)` 安全マクロ、文字列化 (`#`) とトークン連結 (`##`)、**X-Macros** (Enum と文字列を単一テーブルから自動生成する最高峰イディオム)、`_Static_assert` |
+| **08** | [`error_handling_and_jump.h`](./c_sample/include/error_handling_and_jump.h)<br>[`error_handling_and_jump.c`](./c_sample/src/error_handling_and_jump.c) | Linux カーネル標準 **`goto cleanup;`** イディオム (確実な逆順リソースクリーンアップ)、`errno` / `strerror`、**`setjmp` / `longjmp`** (例外エミュレーション) |
+| **09** | [`dynamic_data_structures.h`](./c_sample/include/dynamic_data_structures.h)<br>[`dynamic_data_structures.c`](./c_sample/src/dynamic_data_structures.c) | 容量倍増 (Doubling) による動的配列 (**Vector** 実装と `realloc` の安全な作法)、Linux カーネルスタイル侵入型リスト (**`container_of`** マクロの解剖) |
 
-- [`src/main.c`](file:///C:/Users/harun/programming/C++/sample/c_sample/src/main.c): 全9モジュールを順序よく実演する統合エントリーポイント
+- [`src/main.c`](./c_sample/src/main.c): 全9モジュールを順序よく実演する統合エントリーポイント
 
 > 📖 **詳細ガイドドキュメント**:
-> - [**`POINTERS.md`**](file:///C:/Users/harun/programming/C++/sample/c_sample/POINTERS.md): ポインタ・アドレス演算の完全図解
-> - [**`LAMBDA.md`**](file:///C:/Users/harun/programming/C++/sample/c_sample/LAMBDA.md): C言語による高階関数・クロージャ完全理解ガイド
+> - [**`POINTERS.md`**](./c_sample/POINTERS.md): ポインタ・アドレス演算の完全図解
+> - [**`LAMBDA.md`**](./c_sample/LAMBDA.md): C言語による高階関数・クロージャ完全理解ガイド
