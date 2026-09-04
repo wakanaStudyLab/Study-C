@@ -5,8 +5,8 @@
 cmake_minimum_required(VERSION 3.20)
 project(cpp_sample LANGUAGES CXX)
 
-# 1. C++20 標準規格を要求
-set(CMAKE_CXX_STANDARD 20)
+# 1. C++23 標準規格を要求
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF) # 標準規格厳格モード
 
@@ -19,6 +19,13 @@ set(CPP_SOURCES
     src/templates_and_modern_types.cpp
     src/concurrency.cpp
     src/lambda_expressions.cpp
+    src/coroutines_and_modern_cpp.cpp
+    src/error_handling_and_expected.cpp
+    src/advanced_templates_and_metaprogramming.cpp
+    src/operator_overloading_and_spaceship.cpp
+    src/memory_and_low_level.cpp
+    src/filesystem_and_io.cpp
+    src/advanced_concurrency.cpp
 )
 
 # 3. 実行可能バイナリターゲットの作成

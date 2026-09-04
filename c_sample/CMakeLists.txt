@@ -17,6 +17,11 @@ set(C_SOURCES
     src/structs_and_functions.c
     src/strings_and_io.c
     src/lambda_and_callbacks.c
+    src/modern_c11_features.c
+    src/bitwise_and_binary.c
+    src/preprocessor_and_macros.c
+    src/error_handling_and_jump.c
+    src/dynamic_data_structures.c
 )
 
 # 3. 実行可能バイナリターゲットの作成
@@ -28,6 +33,9 @@ if(MSVC)
 else()
     target_compile_options(c_sample PRIVATE -Wall -Wextra -pedantic)
 endif()
+
+# Windows MSVC CRT の fopen / strerror 等の非推奨警告を抑制 (ポータブルな標準Cコードのため)
+target_compile_definitions(c_sample PRIVATE _CRT_SECURE_NO_WARNINGS)
 
 # 5. インクルードディレクトリの指定
 target_include_directories(c_sample PRIVATE

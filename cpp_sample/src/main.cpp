@@ -5,6 +5,13 @@
 #include "templates_and_modern_types.hpp"
 #include "concurrency.hpp"
 #include "lambda_expressions.hpp"
+#include "coroutines_and_modern_cpp.hpp"
+#include "error_handling_and_expected.hpp"
+#include "advanced_templates_and_metaprogramming.hpp"
+#include "operator_overloading_and_spaceship.hpp"
+#include "memory_and_low_level.hpp"
+#include "filesystem_and_io.hpp"
+#include "advanced_concurrency.hpp"
 
 /**
  * ============================================================================
@@ -92,6 +99,58 @@ int main() {
     // ・Concepts によるゼロオーバーヘッド関数呼び出し
     print_section("06: Lambda Expressions & Functional Modern C++");
     modern_cpp::run_lambda_expressions_demo();
+
+    // --- モジュール 07: コルーチン・コンパイル時計算・C++20/23 ---
+    // ・co_yield による遅延ジェネレータ
+    // ・consteval による完全コンパイル時ハッシュ計算
+    // ・std::span によるゼロコピー安全スライス
+    // ・std::format による現代的フォーマット
+    print_section("07: Coroutines (co_yield), Consteval, Span, and std::format");
+    modern_cpp::run_coroutines_and_modern_cpp_demo();
+
+    // --- モジュール 08: エラーハンドリング・例外・C++23 std::expected ---
+    // ・std::expected<T, E> による Result 型エラー表現 (Rust 相当)
+    // ・モナディック操作 (and_then, transform, or_else)
+    // ・noexcept 保証とムーブ最適化
+    print_section("08: Error Handling, Exception Safety, and C++23 std::expected");
+    modern_cpp::run_error_handling_demo();
+
+    // --- モジュール 09: 高度なテンプレート・メタプログラミング ---
+    // ・可変引数テンプレート & C++17 Fold 式
+    // ・if constexpr と Type Traits
+    // ・CRTP によるゼロオーバーヘッド静的ポリモーフィズム
+    print_section("09: Advanced Templates, Fold Expressions, and CRTP");
+    modern_cpp::run_advanced_templates_demo();
+
+    // --- モジュール 10: 演算子オーバーロードと宇宙船演算子 (<=>) ---
+    // ・基本演算子のオーバーロード
+    // ・C++20 三方比較演算子 (<=>) による比較演算子の自動一括導出
+    // ・自作コンテナとカスタムイテレータ (Range-based for)
+    print_section("10: Operator Overloading and C++20 Spaceship Operator (<=>)");
+    modern_cpp::run_operator_overloading_demo();
+
+    // --- モジュール 11: 高度メモリ管理・PMR・低レイヤ操作 ---
+    // ・std::weak_ptr による循環参照解決
+    // ・std::pmr によるスタックバンプアロケータ (ヒープ確保なし)
+    // ・std::bit_cast による安全なビット再解釈
+    // ・alignas / alignof によるハードウェアアライメント
+    print_section("11: Memory Management, std::pmr, bit_cast, and Low-Level");
+    modern_cpp::run_memory_and_low_level_demo();
+
+    // --- モジュール 12: ファイルシステム・最新I/O ---
+    // ・C++23 std::print / std::println
+    // ・std::filesystem によるパス操作・ディレクトリ走査
+    // ・バイナリファイルの読み書き
+    print_section("12: Filesystem Operations, Binary I/O, and C++23 std::print");
+    modern_cpp::run_filesystem_and_io_demo();
+
+    // --- モジュール 13: 高度な並行処理・同期プリミティブ ---
+    // ・std::scoped_lock によるデッドロックフリーな複数ロック
+    // ・std::condition_variable による Producer-Consumer キュー
+    // ・std::counting_semaphore による同時アクセス制限
+    // ・std::latch によるカウントダウン同期
+    print_section("13: Advanced Concurrency, Mutex, Semaphore, and Latch");
+    modern_cpp::run_advanced_concurrency_demo();
 
     // 全モジュール完了のバナーを表示
     print_banner("ALL C++ TUTORIAL MODULES COMPLETED SUCCESSFULLY!");

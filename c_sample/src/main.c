@@ -3,6 +3,11 @@
 #include "structs_and_functions.h"
 #include "strings_and_io.h"
 #include "lambda_and_callbacks.h"
+#include "modern_c11_features.h"
+#include "bitwise_and_binary.h"
+#include "preprocessor_and_macros.h"
+#include "error_handling_and_jump.h"
+#include "dynamic_data_structures.h"
 
 /**
  * ============================================================================
@@ -83,6 +88,40 @@ int main(void) {
      * ・ヒープ確保による安全な非同期コールバックライフサイクル */
     print_section("04: Callbacks, State Capture (void* user_data), and Closures");
     run_lambda_and_callbacks_demo();
+
+    /* --- モジュール 05: Modern C11/C23 言語機能 ---
+     * ・_Generic による型ディスパッチ（疑似オーバーロード）
+     * ・匿名構造体 & 匿名共用体
+     * ・フレキシブル配列メンバ */
+    print_section("05: Modern C11/C23 Features (_Generic, Anonymous Structs/Unions)");
+    run_modern_c11_features();
+
+    /* --- モジュール 06: ビット演算・エンディアン・バイナリ操作 ---
+     * ・ビットマスク・ビットシフトによるフラグ管理
+     * ・ビットフィールドによる最小メモリレイアウト
+     * ・エンディアン判定とバイトスワップ */
+    print_section("06: Bitwise Operations, Bitfields, and Endianness");
+    run_bitwise_and_binary_demo();
+
+    /* --- モジュール 07: プリプロセッサ極意・マクロ・X-Macros ---
+     * ・do-while(0) による安全な複数文マクロ
+     * ・文字列化 (#) とトークン連結 (##)
+     * ・X-Macros パターンによる Enum/文字列の一元自動生成 */
+    print_section("07: Preprocessor Macros, Stringification, and X-Macros");
+    run_preprocessor_and_macros_demo();
+
+    /* --- モジュール 08: エラーハンドリング・goto cleanup・setjmp/longjmp ---
+     * ・Linux カーネル標準の goto cleanup イディオム
+     * ・errno とエラー処理
+     * ・setjmp / longjmp による非局所大域脱出 (例外エミュレーション) */
+    print_section("08: Error Handling (goto cleanup) and setjmp/longjmp");
+    run_error_handling_and_jump_demo();
+
+    /* --- モジュール 09: 動的データ構造 ---
+     * ・容量自動倍増 (Doubling) による動的配列 (Vector) 実装
+     * ・Linux カーネルスタイル侵入型リストと container_of マクロの物理構造 */
+    print_section("09: Dynamic Data Structures (Vector and container_of Intrusive List)");
+    run_dynamic_data_structures_demo();
 
     print_banner("ALL C TUTORIAL MODULES COMPLETED SUCCESSFULLY!");
 
